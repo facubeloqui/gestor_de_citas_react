@@ -6,7 +6,10 @@ import Box from '@mui/material/Box';
 
 
 const Validacion = yup.object({
-
+    email: yup
+    .string('Ingresa tu mail')
+    .email('Ingresa un email valido')
+    .required('De esta no safas')
 })
 
 
