@@ -1,9 +1,14 @@
 import React from 'react'
+import Cita from './Cita'
 
-export default function ListadoCitas() {
+export default function ListadoCitas({citas, eliminarCita}) {
   return (
     <>
-    ListadoCitas
+    {citas.map((x) => {
+      return(
+        <Cita cita = {x} eliminarCita= {eliminarCita}/>
+      )
+    })}
     </>
   )
 }

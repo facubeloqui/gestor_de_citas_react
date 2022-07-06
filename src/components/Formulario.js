@@ -1,26 +1,33 @@
 import React, {Fragment, useState} from 'react'
 
-function Formulario() {
-  const [datos, setDatos] = useState({
+function Formulario({citas, setCitas}) {
+  const [cita, setCita] = useState({
     nombreMascota: '',
     nombreDueno: '',
     fecha: '',
     hora: '',
     sintomas: ''
   })
+  const { mascota, nombre, fecha, hora, sintomas } = cita
 
   const handleInputChange = (event) => {
     // console.log(event.target.name)
     // console.log(event.target.value)
     setDatos({
-        ...datos,
+        ...cita,
         [event.target.name] : event.target.value
     })
-}
-const enviarDatos = (event) => {
-  event.preventDefault()
-  console.log('enviando datos...' + datos.nombreMascota + ' ' + datos.nombreDueno + ' ' + datos.fecha + ' ' + datos.hora  + ' ' + datos.sintomas)
-}
+  }
+  const [error, setError] = useState = false;
+
+  function guardarCita(e){
+    e.preventDefault()
+
+    if (mascota =)
+  }
+
+
+
   return (
     <Fragment>
             <h1>Crear mi Cita</h1>

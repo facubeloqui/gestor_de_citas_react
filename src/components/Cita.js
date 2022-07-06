@@ -1,9 +1,19 @@
 import React from 'react'
 
-export default function Cita() {
+export default function Cita({cita, eliminarCita}) {
   return (
     <>
-    Cita
+    <div className='cita'>
+       <p>Mascota: <span>{cita.mascota}</span></p>
+        <p>Dueño: <span>{cita.nombre}</span></p>
+        <p>Fecha: <span>{cita.fecha}</span></p>
+        <p>Hora: <span>{cita.hora}</span></p>
+        <p>Sintomas: <span>{cita.sintomas}</span></p>
+      <button
+        className = 'button eliminar u-full-width'
+        onClick = { () => eliminarCita(cita.id) }
+      >Eliminar &times;</button>
+    </div>
     </>
   )
 }
